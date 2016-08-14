@@ -5,24 +5,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Burger Roulette</title>
 		<meta name="description" content="There are more 1.05 x 10^89 burger combinbations at The Fix. Find yours." />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
 		<div id="viewport">
+			<div class="nav">
+				<h1>Burger Roulette</h1>
+				<i class="toggleSlide fa fa-cog" aria-hidden="true"></i>
+			</div>
 			<div class="slideOut">
 				<form id="settings">
-					<label for="budget">Maximum Price:</label> $<input type="number" name="budget" min="9" max="999" value="15" />
-					<label for="diet">I am: </label> 
-					<select name="diet">
+					<div class="toggleSlide">close</div>
+					<p><label for="diet">I am </label> 
+					<select id="diet" name="diet">
 						<option value="omnivore">Omnivore</option>
 						<option value="veg">Vegetarian</option>
 						<option value="vegan" selected>Vegan</option>
-					</select> 
-					<input type="checkbox" name="hardMode"> <label for="hardMode">Hard Mode?</label>
+					</select></p>
+					<p><label for="budget">My price limit is:</label> $<input type="number" id="budget" name="budget" min="9" max="999" value="15" /></p>
+					<p><input type="checkbox" id="hardMode" name="hardMode"> <label for="hardMode">Hard Mode?</label></p>
+					<p class="small">With hard mode turned on, there's no limit to the number of ingredients, or type of ingredient.</p>
 				</form>
-				<p class="credit">By <a href="http://gopperman.com">gopperman</a>.</p>
+				<p class="credit">By <a href="http://gopperman.com" target="_blank">gopperman</a></p>
 			</div>
-			Hello. Welcome to Burger Roulette.
-			<button id="generateBurger">Burger Me</button>
+			<h2>Touch The Burger</h2>
+			<button id="generateBurger"></button>
 			<div id="results"></div>
 		</div>
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>

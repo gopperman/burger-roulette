@@ -31,19 +31,19 @@ var menu = {
 			'vegan': false,
 		},
 		{
-			'name': 'Yellowfin Tuna',
+			'name': 'Yellowfin Tuna Burger',
 			'price': 12,
 			'veg': false,
 			'vegan': false,
 		},
 		{
-			'name': 'Lamb',
+			'name': 'Lamb Burger',
 			'price': 10,
 			'veg': false,
 			'vegan': false,
 		},
 		{
-			'name': 'Turkey',
+			'name': 'Turkey Burger',
 			'price': 9,
 			'veg': false,
 			'vegan': false,
@@ -249,6 +249,12 @@ var menu = {
 			'vegan': false,	
 			'type': 'mayo',
 		},
+		{
+			'name': 'Sundried Tomato and Artichoke Spread',
+			'price': 1.5,
+			'veg': true,
+			'vegan': true,	
+		},
 	],
 	'toppings': [
 		{
@@ -310,12 +316,6 @@ var menu = {
 			'price': 0.75,
 			'veg': true,
 			'vegan': true,	
-		},
-		{
-			'name': 'Sundried Tomato and Artichoke Spread',
-			'price': 1.5,
-			'veg': true,
-			'vegan': null,	
 		},
 		{
 			'name': 'Arugula',

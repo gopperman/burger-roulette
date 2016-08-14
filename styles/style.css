@@ -1,0 +1,184 @@
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(110deg, #12FFF7 20%, #B3FFAB 80%);
+  background: -o-linear-gradient(110deg, #B3FFAB 80%, #12FFF7 80%);
+  background: linear-gradient(left bottom, right top, #B3FFAB 20%, #12FFF7 80%);
+  color: #fff;
+  font-family: 'Montserrat',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  text-align: center;
+}
+
+#viewport {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 720px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 10px 20px;
+  position: relative;
+}
+
+#results {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+#hardMode {
+  height: 1.6em;
+  width: 1.6em;
+}
+
+.toggleSlide {
+  font-size: 1.3em;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+.toggleSlide:hover {
+  cursor: hand;
+  cursor: pointer;
+}
+
+.slideOut {
+  font-size: 1.6em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 85%;
+  right: -100%;
+  text-align: left;
+  background: rgba(2, 32, 30, 0.95);
+  padding: 20px;
+  transition: all, .3s;
+  z-index: 9;
+}
+.slideOut--open {
+  right: 0;
+}
+.slideOut .small {
+  margin-top: 0;
+  font-size: .5em;
+  color: #007874;
+}
+.slideOut .toggleSlide {
+  color: #007874;
+  font-size: .7em;
+  text-decoration: underline;
+}
+
+.credit {
+  color: #B3FFAB;
+  font-size: .9em;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+.credit a, .credit a:hover, .credit a:active, .credit a:focus {
+  color: #B3FFAB;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-top: 4px;
+  text-align: left;
+}
+
+input[type="number"], select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 1em;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  text-decoration: underline;
+  color: #B3FFAB;
+}
+input[type="number"]:active, input[type="number"]:focus, input[type="number"]:hover, select:active, select:focus, select:hover {
+  border: 0;
+  outline: 0;
+}
+
+button {
+  background: url(../img/burger.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  clear: both;
+  cursor: hand;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  height: 45vw;
+  width: 45vw;
+  max-height: 160px;
+  max-width: 160px;
+  border: 0px solid transparent;
+  -webkit-animation: pulse 3s linear;
+  animation: pulse 3s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+button:active, button:focus {
+  outline: 0;
+  border: 0;
+}
