@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Burger Roulette</title>
+		<meta name="description" content="There are more 1.05 x 10^89 burger combinbations at The Fix. Find yours." />
+	</head>
+	<body>
+		<div id="viewport">
+			<div class="slideOut">
+				<form id="settings">
+					<label for="budget">Maximum Price:</label> $<input type="number" name="budget" min="9" max="999" value="15" />
+					<label for="diet">I am: </label> 
+					<select name="diet">
+						<option value="omnivore">Omnivore</option>
+						<option value="veg">Vegetarian</option>
+						<option value="vegan" selected>Vegan</option>
+					</select> 
+					<input type="checkbox" name="hardMode"> <label for="hardMode">Hard Mode?</label>
+				</form>
+				<p class="credit">By <a href="http://gopperman.com">gopperman</a>.</p>
+			</div>
+			Hello. Welcome to Burger Roulette.
+			<button id="generateBurger">Burger Me</button>
+			<div id="results"></div>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  		<script src="scripts/main.min.js"></script>
+	</body>
+</html>
