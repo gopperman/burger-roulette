@@ -99,8 +99,13 @@ $(document).ready(function() {
 		'settings': $('#settings'),
 		'submit': $('#generateBurger'),
 		'results': $('#results'),
+		'toggleSlide': $('.toggleSlide'),
+		'slideOut': $('.slideOut'),
 	};
 	$el.submit.click(function() {
 		new Burger();
+	});
+	$el.toggleSlide.click(function() {
+		$el.slideOut.toggleClass('slideOut--open');
 	});
 });
