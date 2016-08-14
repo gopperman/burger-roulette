@@ -93,11 +93,14 @@ body {
 	position: absolute;
 	right: 20px;
 	top: 15px;
+	&.fa {font-size: 1.3em;}
 	&:hover {
 		cursor: hand;
 		cursor: pointer;
 	}
 }
+
+
 
 .slideOut {
 	font-size: 1.6em;
@@ -142,10 +145,17 @@ body {
 }
 
 h1 {
-	font-size: 1.2em;
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 1.4em;
 	font-weight: normal;
 	margin-top: 4px;
 	text-align: left;
+}
+
+h2 {
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 2em;
+	margin: 1em 0 .25em;
 }
 
 input[type="number"], select {
