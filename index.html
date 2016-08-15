@@ -26,26 +26,27 @@
 	    <meta name="twitter:image" content="http://gopperman.github.io/burger-roulette/img/burger.png">
 	</head>
 	<body>
-		<div id="viewport">
+		<div class="slideOut">
+			<form id="settings">
+				<div class="toggleSlide">close</div>
+				<p><label for="diet">I am </label> 
+				<select id="diet" name="diet">
+					<option value="omnivore">Omnivore</option>
+					<option value="veg">Vegetarian</option>
+					<option value="vegan" selected>Vegan</option>
+				</select></p>
+				<p><label for="budget">My price limit is:</label> $<input type="number" id="budget" name="budget" min="9" max="999" value="15" /></p>
+				<p><input type="checkbox" id="hardMode" name="hardMode"> <label for="hardMode">Hard Mode?</label></p>
+				<p class="small">With hard mode turned on, there's no limit to the number of ingredients, or type of ingredient.</p>
+			</form>
+			<p class="credit">By <a href="http://gopperman.com" target="_blank">gopperman</a></p>
+		</div>
+		<div class="container">
 			<div class="nav">
 				<h1>Burger Roulette</h1>
 				<div class="toggleSlide">settings <i class="fa fa-cog" aria-hidden="true"></i>
 			</div>
-			<div class="slideOut">
-				<form id="settings">
-					<div class="toggleSlide">close</div>
-					<p><label for="diet">I am </label> 
-					<select id="diet" name="diet">
-						<option value="omnivore">Omnivore</option>
-						<option value="veg">Vegetarian</option>
-						<option value="vegan" selected>Vegan</option>
-					</select></p>
-					<p><label for="budget">My price limit is:</label> $<input type="number" id="budget" name="budget" min="9" max="999" value="15" /></p>
-					<p><input type="checkbox" id="hardMode" name="hardMode"> <label for="hardMode">Hard Mode?</label></p>
-					<p class="small">With hard mode turned on, there's no limit to the number of ingredients, or type of ingredient.</p>
-				</form>
-				<p class="credit">By <a href="http://gopperman.com" target="_blank">gopperman</a></p>
-			</div>
+
 			<h2>Touch The Burger</h2>
 			<button id="generateBurger"></button>
 			<div id="results"></div>
