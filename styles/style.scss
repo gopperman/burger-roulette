@@ -134,11 +134,11 @@ body {
     	font-size: .7em;
     	text-decoration: underline;
     }
-    button.toggleSlide {
+    .button.toggleSlide {
     	background: darken($secondary, 30%);
     	color: #fff;
     	border: 0;
-    	display: block;
+    	display: inline-block;
     	font-family: $font-secondary;
     	font-size: 1em;
     	margin: 0 auto;
@@ -146,6 +146,10 @@ body {
     	position: static;
     	text-decoration: none;
     }
+}
+
+.center {
+	text-align: center;
 }
 
 .credit {

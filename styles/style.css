@@ -125,17 +125,21 @@ body {
   font-size: .7em;
   text-decoration: underline;
 }
-.slideOut button.toggleSlide {
+.slideOut .button.toggleSlide {
   background: #007874;
   color: #fff;
   border: 0;
-  display: block;
+  display: inline-block;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   margin: 0 auto;
   padding: 8px 32px;
   position: static;
   text-decoration: none;
+}
+
+.center {
+  text-align: center;
 }
 
 .credit {
