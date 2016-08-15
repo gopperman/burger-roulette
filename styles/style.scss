@@ -3,6 +3,7 @@ $secondary: #12FFF7;
 $tertiary: #02201E;
 
 $font-primary: 'Permanent Marker', sans-serif;
+$font-secondary: 'Montserrat',sans-serif;
 
 @-webkit-keyframes pulse {
 	0% {
@@ -68,7 +69,6 @@ body {
     margin: 0;
     text-align: center;
     overflow-x: hidden;
-	overflow-y: scroll;
 	position: relative;
 }
 
@@ -128,11 +128,23 @@ body {
     	color: darken($secondary, 30%);
     }
 
-    .toggleSlide {
+    .close {
     	color: darken($secondary, 30%);
     	font-family: 'Montserrat',sans-serif;
     	font-size: .7em;
     	text-decoration: underline;
+    }
+    button.toggleSlide {
+    	background: darken($secondary, 30%);
+    	color: #fff;
+    	border: 0;
+    	display: block;
+    	font-family: $font-secondary;
+    	font-size: 1em;
+    	margin: 0 auto;
+    	padding: 8px 32px;
+    	position: static;
+    	text-decoration: none;
     }
 }
 
@@ -141,8 +153,9 @@ body {
 	font-size: .9em;
 	position: absolute;
 	bottom: 0;
+	left: 0;
+	right: 0;
 	text-align: center;
-	width: 100%;
 	z-index: 10;
 	a, a:hover, a:active, a:focus {
 		color: $primary;
@@ -180,7 +193,7 @@ input[type="number"], select {
 	}
 }
 
-button {
+#generateBurger {
 	background: url(../img/burger.png) no-repeat center center;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
