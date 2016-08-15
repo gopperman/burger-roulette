@@ -1,6 +1,7 @@
 var $el = {};
 
 function Burger() {
+	// To-do: Make this function call not require .each
 	this.prune = function() {
 		var i = this.length;
 		while (i--) {
@@ -22,7 +23,6 @@ function Burger() {
 	this.pick = function(list) {
 		var key = random(0, list.length - 1);
 		var item = this.copy(list[key]);
-		//FIXME FIXME FIXME
 		list.splice(key, 1); // Remove the item from the pool
 		return item;
 	};
@@ -31,10 +31,13 @@ function Burger() {
 		var burger = [];
 		var category;
 		var categories = ['cheese', 'sauces', 'toppings'];
-		// To-do: Also dedupe special types
 		var limits = {
 			'cheese': 2,
-			'sauces': 2,
+			'sauce': 2,
+			'mayo': 1,
+			'bbq': 1,
+			'pickle': 1,
+			'onion': 1,
 			'toppings': -1,
 		};
 		var selection;
@@ -57,26 +60,42 @@ function Burger() {
 		selection = this.pick(itemPool.buns);
 		burger.push(selection.name.toLowerCase() + " bun");
 
-		$.each([itemPool.cheese, itemPool.sauces, itemPool.toppings], this.prune);
-
+		$.each([itemPool.toppings], this.prune);
+toppingsLoop:
 		while ( true ) {
-			// Which category will we be selecting from?
-			category = categories[random(0, categories.length - 1)];
-			if (! itemPool[category].length || ( 'on' !== settings.HardMode && 0 === limits[category])) {
-				continue;
-			}
-
-			selection = this.pick(itemPool[category]);
+			selection = this.pick(itemPool.toppings);
 			if (budget < selection.price ) {
 				break;
 			} else {
+				if ('on' !== settings.hardMode && selection.type) {
+
+					// Check if we've hit our limit on these types
+					for (var i = selection.type.length - 1; i >= 0; i--) {
+						var type = selection.type[i];
+						if (undefined !== limits[type] && 0 === limits[type]) {
+							// We've hit the limit
+							continue toppingsLoop;
+						}
+					};
+
+				}
+
 				burger.push(selection.name.toLowerCase());
 				budget -= selection.price;
-				limits[category]--;
+
+				// Update limits
+				if ('on' !== settings.hardMode && selection.type) {
+					for (var i = selection.type.length - 1; i >= 0; i--) {
+						type = selection.type[i];
+						if (undefined !== limits[type]) {
+							limits[type]--;
+						}
+					}
+				}
 			}
 
 			// There's a 15% chance we should just quit while we're ahead
-			if ( random(0,99) < 10 && 'on' !== settings.hardMode) {
+			if ( random(0,99) < 15 && 'on' !== settings.hardMode) {
 				break;
 			}
 		}

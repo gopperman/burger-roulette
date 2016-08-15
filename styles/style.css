@@ -84,6 +84,7 @@ body {
 }
 
 .toggleSlide {
+  font-family: "Permanent Marker", sans-serif;
   font-size: 1.3em;
   position: absolute;
   right: 20px;
@@ -120,6 +121,7 @@ body {
 }
 .slideOut .toggleSlide {
   color: #007874;
+  font-family: 'Montserrat',sans-serif;
   font-size: .7em;
   text-decoration: underline;
 }
@@ -138,7 +140,7 @@ body {
 }
 
 h1 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: "Permanent Marker", sans-serif;
   font-size: 1.4em;
   font-weight: normal;
   margin-top: 4px;
@@ -146,7 +148,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: "Permanent Marker", sans-serif;
   font-size: 2em;
   margin: 1em 0 .25em;
 }
