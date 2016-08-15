@@ -49,13 +49,13 @@ var menu = {
 			'vegan': false,
 		},
 		{
-			'name': 'Bison',
+			'name': 'Bison Burger',
 			'price': 12,
 			'veg': false,
 			'vegan': false,
 		},
 		{
-			'name': 'Salmon',
+			'name': 'Salmon Burger',
 			'price': 12,
 			'veg': false,
 			'vegan': false,
@@ -89,7 +89,7 @@ var menu = {
 	],
 	'cheese': [
 		{
-			'name': 'American',
+			'name': 'American Cheese',
 			'price': 0.75,
 			'veg': true,
 			'vegan': false,	
@@ -155,8 +155,14 @@ var menu = {
 			'vegan': false,	
 		},
 		{
-			'name': 'Great Blue Hill',
+			'name': 'Great Blue Hill Cheese',
 			'price': 1.5,
+			'veg': true,
+			'vegan': false,	
+		},
+		{
+			'name': 'Parmesan Crisp',
+			'price': 0.75,
 			'veg': true,
 			'vegan': false,	
 		},
@@ -273,13 +279,15 @@ var menu = {
 			'name': 'Pickles',
 			'price': 0,
 			'veg': true,
-			'vegan': true,	
+			'vegan': true,
+			'type': 'pickle'
 		},
 		{
 			'name': 'Onion',
 			'price': 0,
 			'veg': true,
-			'vegan': true,	
+			'vegan': true,
+			'type': 'onion',
 		},
 		{
 			'name': 'Sautéed Mushrooms',
@@ -292,6 +300,7 @@ var menu = {
 			'price': 0.75,
 			'veg': true,
 			'vegan': true,	
+			'type': 'onion',
 		},
 		{
 			'name': 'House Slaw',
@@ -309,13 +318,15 @@ var menu = {
 			'name': 'Mustard Pickles',
 			'price': 0.75,
 			'veg': true,
-			'vegan': true,	
+			'vegan': true,
+			'type': 'pickle',
 		},
 		{
 			'name': 'Fried Pickles',
 			'price': 0.75,
 			'veg': true,
-			'vegan': true,	
+			'vegan': true,
+			'type': 'pickle',	
 		},
 		{
 			'name': 'Arugula',
@@ -328,12 +339,6 @@ var menu = {
 			'price': 0.75,
 			'veg': true,
 			'vegan': true,	
-		},
-		{
-			'name': 'Parmesan Crisp',
-			'price': 0.75,
-			'veg': true,
-			'vegan': false,	
 		},
 		{
 			'name': 'Avocado',
@@ -378,7 +383,7 @@ var menu = {
 			'vegan': false,	
 		},
 		{
-			'name': 'Andouille',
+			'name': 'Andouille Sausage',
 			'price': 2.5,
 			'veg': false,
 			'vegan': false,	
