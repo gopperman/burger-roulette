@@ -201,10 +201,17 @@ var menu = {
 			'type': ['mayo', 'sauce'],	
 		},
 		{
-			'name': 'Whiskey BBQ Sauce',
+			'name': 'BBQ Sauce',
 			'price': 0.5,
 			'veg': true,
 			'vegan': true,
+			'type': ['bbq', 'sauce'],
+		},
+		{
+			'name': 'Whiskey BBQ Sauce',
+			'price': 0.5,
+			'veg': false,
+			'vegan': false,
 			'type': ['bbq', 'sauce'],	
 		},
 		{
@@ -305,6 +312,12 @@ var menu = {
 		},
 		{
 			'name': 'Sautéed Mushrooms',
+			'price': 0.75,
+			'veg': true,
+			'vegan': true,	
+		},
+		{
+			'name': 'Frizzled Onions',
 			'price': 0.75,
 			'veg': true,
 			'vegan': true,	
