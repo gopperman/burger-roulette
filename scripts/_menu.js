@@ -433,5 +433,11 @@ var menu = {
 			'veg': false,
 			'vegan': false,	
 		},
+		{
+			'name': 'Hash Brown',
+			'price': 1,
+			'veg': true,
+			'vegan': true
+		}
 	],
 };
