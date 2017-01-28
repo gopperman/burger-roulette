@@ -160,14 +160,14 @@ var menu = {
 		},
 		{
 			'name': 'Grain Mustard Cheddar',
-			'price': 1.5,
+			'price': 2,
 			'veg': true,
 			'vegan': false,
 			'type': ['cheese'],	
 		},
 		{
 			'name': 'Great Blue Hill Cheese',
-			'price': 1.5,
+			'price': 2.5,
 			'veg': true,
 			'vegan': false,	
 			'type': ['cheese'],
@@ -279,7 +279,7 @@ var menu = {
 		},
 		{
 			'name': 'Sundried Tomato and Artichoke Spread',
-			'price': 1.5,
+			'price': .75,
 			'veg': true,
 			'vegan': true,
 			'type': ['sauce'],
@@ -312,13 +312,13 @@ var menu = {
 		},
 		{
 			'name': 'Sautéed Mushrooms',
-			'price': 0.75,
+			'price': 1,
 			'veg': true,
 			'vegan': true,	
 		},
 		{
 			'name': 'Frizzled Onions',
-			'price': 0.75,
+			'price': 1,
 			'veg': true,
 			'vegan': true,	
 		},
@@ -350,7 +350,7 @@ var menu = {
 		},
 		{
 			'name': 'Fried Pickles',
-			'price': 0.75,
+			'price': 1,
 			'veg': true,
 			'vegan': true,
 			'type': ['pickle'],	
@@ -380,7 +380,7 @@ var menu = {
 			'vegan': false,	
 		},
 		{
-			'name': 'Beef Chili',
+			'name': 'Turkey Chili',
 			'price': 1.5,
 			'veg': false,
 			'vegan': false,	
@@ -428,7 +428,7 @@ var menu = {
 			'vegan': false,	
 		},
 		{
-			'name': 'Fried Shrimp',
+			'name': 'Duck Confit',
 			'price': 4,
 			'veg': false,
 			'vegan': false,	
